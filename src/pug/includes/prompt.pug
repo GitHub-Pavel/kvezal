@@ -24,19 +24,21 @@
   // .prompt__desc 
   .prompt__form-wrapper
     form.prompt-form
-      label.input-icon
+      label.input-icon.error
         svg(width="20", height="20").input-icon__icon
           use(href="#user")
         // .input-icon__icon 
         input(type="text", placeholder="Ваше имя").input.input-icon__input
+        span.text.text--red.error__text *Неправильное имя
       // .input-icon 
       label.input-icon
         svg(width="20", height="20").input-icon__icon
           use(href="#phone")
         // .input-icon__icon 
         input(type="text", placeholder="Ваш телефон").input.input-icon__input
+        span.text.text--red.error__text *Неправильное имя
       // .input-icon 
-      textarea(name="message", placeholder="Cообщение").input.prompt-form__textarea 
+      textarea(name="message", placeholder="Cообщение").input.prompt-form__textarea
       .prompt-form__row
         label.input-file.prompt-form__input-file
           input(type="file").input-file__input

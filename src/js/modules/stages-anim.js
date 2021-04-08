@@ -4,7 +4,7 @@ import { gsap, TimelineLite } from "gsap/all";
 export default $(function() {
   gsap.registerPlugin()
 
-  const startScroll = $('.stages').offset().top - 100;
+  const startScroll = $('.stages').offset().top - 150;
   const endScroll = $('.stages').offset().top + 300;
   const title = $('.stages-item__title');
   const img = $('.stages-item__img');
@@ -65,9 +65,8 @@ export default $(function() {
   };
 
   const anim = () => {
-    if ($(window).width() >= 960 && was === false) {
+    if ($(window).width() >= 1000 && was === false) {
       const scrollTop = $(window).scrollTop();
-      console.log(scrollTop, startScroll, endScroll)
       if (scrollTop >= startScroll && scrollTop <= endScroll) {
         was = true;
         tl
