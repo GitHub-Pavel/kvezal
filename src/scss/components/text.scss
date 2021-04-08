@@ -1,0 +1,48 @@
+p {
+  padding-bottom: 1.625em;
+  font-size: 1.6rem;
+  color: var(--black);
+}
+
+.text {
+  font-size: 1.6rem;
+  color: var(--black);
+  padding-bottom: 0;
+
+  &--big {
+    font-size: 1.8rem;
+    line-height: 1.562em;
+  }
+
+  &--bold {
+    font-weight: $bold;
+  }
+
+  &--semibold {
+    font-weight: $semi-bold;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--nowrap {
+    white-space: nowrap;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--white {
+    color: var(--white);
+  }
+
+  &--grey {
+    color: var(--grey-light);
+  }
+
+  &--dark_grey {
+    color: var(--dark-grey);
+  }
+}

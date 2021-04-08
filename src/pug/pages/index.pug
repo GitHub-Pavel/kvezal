@@ -1,0 +1,157 @@
+extends /common/layout
+
+block content
+  include /includes/services-item
+  include /includes/benefit-item
+  include /includes/product-item
+  include /includes/stages-item
+
+  section.hero.hero--main
+    .hero__video-wrapper
+      video(poster="img/hero/0.jpg", width="1920", autoplay, muted, loop).hero__video
+        source(src=require("@video/hero.mp4").default, type="video/mp4")
+    // .hero__video-wrapper 
+    .hero__content
+      .container
+        h1.h1.text--white.text--center
+          | КОМПЛЕКСНАЯ МЕТАЛЛООБРАБОТКА В САНКТ-ПЕТЕРБУРГЕ
+        // .h1.text--white 
+        .hero__row
+          .hero__item
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=require("@img/hero/item/0.png").default, alt="Гибкая ценовая политика", width="50", height="50").hero__img.b-lazy
+            // .hero__img.b-lazy 
+            h5.hero__text
+              | Гибкая ценовая политика
+            // .hero__text 
+          // .hero__item 
+          .hero__item
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=require("@img/hero/item/1.png").default, alt="Быстрый расчет стоимости изделий", width="50", height="50").hero__img.b-lazy
+            // .hero__img.b-lazy 
+            h5.hero__text
+              | Быстрый расчет стоимости изделий
+            // .hero__text 
+          // .hero__item 
+          .hero__item
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=require("@img/hero/item/2.png").default, alt="Комплексный подход", width="50", height="50").hero__img.b-lazy
+            // .hero__img.b-lazy 
+            h5.hero__text
+              | Комплексный подход
+            // .hero__text 
+          // .hero__item 
+        // .hero__row 
+        .hero__btn-wrapper
+            a(href="#prompt").hero__btn.btn.btn--big.btn--shadow_big.scroll-to
+              | БЕСПЛАТНО РАСЧИТАТЬ СТОИМОСТЬ
+            // .hero__btn.btn 
+        // .hero__btn-wrapper 
+      // .container 
+    // .hero__content 
+  // .hero 
+
+  include /includes/services
+
+  section.section
+    .container
+      h2.h2.h2--line_left.h2--lg
+        | О НАС
+      // .h2.h2--line_left.h2--lg 
+      .canvas
+        .canvas__rec.canvas__rec--size_7x5.canvas__rec--bottom_left
+        .canvas__rec.canvas__rec--size_8x6.canvas__rec--top_right
+        include /includes/about
+      // .canvas 
+    // .container 
+  // .section 
+
+  section.section.benefit
+    .container
+      h2.h2.h2--line_right.h2--lg.h2--white
+        | НАШИ ПРЕИМУЩЕСТВА
+      // .h2.h2--line_right.h2--lg.h2--white 
+      .row.row--sm
+        +benefit-item(0, "Быстрый и бесплатный расчет стоимости")
+        +benefit-item(1, "Разработка проектов с нуля")
+        +benefit-item(2, "Индивидуальный подход к решению задач")
+        +benefit-item(3, "Отсуствие минимального заказа")
+        +benefit-item(4, "Соответствуем стандартам качества")
+        +benefit-item(5, "Доступные цены")
+      // .row.row--sm 
+    // .container 
+  // .section.benefit 
+
+  section.section.stages
+    h2.h2.h2--center.h2--sm
+      | ЭТАПЫ ВЫПОЛНЕНИЯ ЗАКАЗА
+    // .h2.text--center.h2--sm 
+    .canvas.canvas--grey.canvas--mb
+      .container
+        .stages__row
+          +stages-item(0, "Получение информации от клиента", 1)
+          +stages-item(1, "Изучение технического задания", 2)
+          +stages-item(2, "Расчет стоимости", 3)
+          +stages-item(3, "Согласовываем стоимость и детали проекта", 4)
+          +stages-item(4, "Изготовление изделия", 5)
+          +stages-item(5, "Доставка изделия", 6)
+        // .stages__row 
+      // .container 
+    // .canvas.canvas--grey.canvas--mb 
+  // .section.stages 
+
+  section#prompt
+    .container
+      include /includes/prompt
+    // .container 
+
+  section.section.product
+    .container
+      h2.h2.h2--line_right.h2--lg
+        | НАШИ ПРОДУКТЫ
+      // .h2.h2--line_right.h2--lg 
+      .row.row--md
+        +product-item(0, "Конвейеры и его части", "Ленточные, пластичные, цепной, скребковый, винтовой и др конвейеры")
+        +product-item(1, "Элементы вентиляции", "Вентиляционных фланцов, заглушек и абсорберов")
+        +product-item(2, "Направляющие", "Направляющие для мебели, корпусов приборов, конвеерных линий")
+        +product-item(3, "Корпуса светильников", "Корпуса для светодиодных светильников, корпуса встроенных светильников")
+      // .row.row--md 
+    // .container 
+  // .section.product 
+
+  section.section
+    .container
+      .canvas
+        .canvas__rec.canvas__rec--size_4x3.canvas__rec--top_left
+        .canvas__rec.canvas__rec--size_5x8.canvas__rec--bottom_right
+        .article
+          img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=require("@img/service.jpg").default, alt="service").b-lazy
+          h2 Сервис по обработке металла: подробности оказания услуг
+          p В нашей компании в Санкт-Петербурге Вы можете оформить заказ на металлообработку, а именно изготовление высококачественной продукции. На нашем производстве используется профессиональное оборудование: сварочные аппараты (полуавтоматическая сварка, сварка аргоном), cтанок оптоволоконной лазерной резки LF3015GCR, 1500 Вт, размер стола 1500х3000 со сменным столом и труборез с длиной стола 6000 мм, ленточная пила, покрасочная порошковая камера.
+          p Мы всегда неукоснительно соблюдаем техническое задание Заказчика, держим достойный уровень качества при невысокой цене.
+        // .article 
+      // .canvas 
+    // .container 
+  // .section 
+
+  section.section.section--pt
+    .container
+      .article
+        h2 Услуги на заказ
+        ul
+         li Предоставление качественных услуг по металлообработке в Санкт-Петербурге и России в целом.
+         li Максимальная полезность и продуктивность для Заказчиков – в срок выполнять поставленные задачи, сохраняя высочайшие стандартны качества при низкой цене.
+         li Консультировать на начальной стадии проектов, помогать оптимизировать проекты, их стоимость.
+        br
+        span Области нашей работы:
+        ol
+          li Машиностроение
+          li Инфраструктура
+          li Медицинское оборудование
+          li Пищевая промышленность
+          li Приборостроение
+          li Строительство
+          li Торговля и реклама
+          li Декор
+          li Строительство
+          li Сельское хозяйство
+      // .article 
+    // .container 
+  // .section.section--pt 

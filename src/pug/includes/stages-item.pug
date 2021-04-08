@@ -1,0 +1,14 @@
+mixin stages-item(img, title, num)
+  .stages-item
+    h6.stages-item__title= title
+    // .stages-item__title 
+    img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" ,data-src=require("@img/stages/"+img+".png").default, alt=title, width="60", height="60").stages-item__img.b-lazy
+    // .stages-item__img 
+    h3.text--white.stages-item__num
+      span.stages-item__num-circle
+      span.stages-item__num-text= num
+    // .text--white.stages-item__num 
+    .stages-item__line.stages-item__line--first
+    .stages-item__line.stages-item__line--second
+    .stages-item__line.stages-item__line--third
+  // .stages-item 

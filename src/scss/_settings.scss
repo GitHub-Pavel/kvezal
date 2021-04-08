@@ -1,0 +1,136 @@
+/*
+ * ==================================================================================
+ * reset
+ * ==================================================================================
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+ * ==================================================================================
+ * html
+ * ==================================================================================
+ */
+
+html {
+    font-size: 10px;
+}
+
+/*
+ * ==================================================================================
+ * body
+ * ==================================================================================
+ */
+
+body {
+    font-family: "OpenSans", sans-serif;
+}
+
+/*
+ * ==================================================================================
+ * standart
+ * ==================================================================================
+ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.b-lazy {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    min-width: 320px;
+    overflow: hidden;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+button {
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/*
+ * ==================================================================================
+ * grid
+ * ==================================================================================
+ */
+
+.container {
+    max-width: $widthContainer + 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.row {
+    display: grid;
+    grid-gap: var(--column-gap);
+
+    &--lg {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    &--md {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &--sm {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*
+ * ==================================================================================
+ * link
+ * ==================================================================================
+ */
+
+a {
+    font-size: inherit;
+    font-weight: inherit;
+    color: var(--blue);
+    line-height: inherit;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/*
+ * ==================================================================================
+ * visually-hidden
+ * ==================================================================================
+ */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}

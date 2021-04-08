@@ -1,0 +1,22 @@
+mixin services-item(img, title)
+  .services-item
+    .services-item__content
+      svg(width="70", height="70").services-item__icon
+        use(href="#services--" + img)
+      // .services-item__icon 
+      h5.services-item__title= title
+      // .services-item__title 
+      ul.services-item__list
+        li.services-item__list-item
+          a(href="").services-item__link
+            | Гибка труб
+          // .services-item__link 
+        // .services-item__list-item 
+        li.services-item__list-item
+          a(href="").services-item__link
+            | Гибка листового алюминия
+          // .services-item__link 
+        // .services-item__list-item 
+      // .services-item__list 
+    // .services-item__content
+  // .services-item 

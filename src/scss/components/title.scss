@@ -1,0 +1,89 @@
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.h1, h1 {
+  font-size: 5.4rem;
+  padding-bottom: .54em;
+  text-transform: uppercase;
+}
+
+.h2, h2 {
+  --title-margin: 40px;
+
+  font-size: 3.5rem;
+  padding-bottom: var(--title-margin);
+  position: relative;
+  display: inline-block;
+}
+
+.h2 {
+  --line-margin: 40px;
+
+  text-transform: uppercase;
+
+  &--sm {
+    --title-margin: 30px;
+  }
+
+  &--lg {
+    --title-margin: 60px;
+  }
+  
+  &--line_right {
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - var(--title-margin) / 2);
+      left: calc(100% + var(--line-margin));
+      width: 100vw;
+      height: 2px;
+      background: var(--green-extra-light);
+    }
+  }
+  
+  &--line_left {
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(50% - var(--title-margin) / 2);
+      right: calc(100% + var(--line-margin));
+      width: 100vw;
+      height: 1px;
+      background: var(--green-extra-light);
+    }
+  }
+
+  &--white {
+    color: var(--white);
+
+    &::after, &::before {
+      background: var(--white);
+    }
+  }
+
+  &--center {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.h3, h3 {
+  font-size: 2.4em;
+}
+
+.h4, h4 {
+  font-size: 2rem;
+}
+
+.h5, h5 {
+  font-size: 1.8rem;
+}
+
+.h6, h6 {
+  font-size: 1.6rem;
+}

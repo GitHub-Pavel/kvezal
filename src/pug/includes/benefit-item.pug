@@ -1,0 +1,7 @@
+mixin benefit-item(img, title)
+  .benefit-item
+    img(src=require("@img/benefit/"+img+".png").default, alt=title, width="50", height="50").benefit-item__icon
+    // .benefit-item__icon 
+    h5.h5.benefit-item__title= title
+    // .h5.benefit-item__title 
+  // .benefit-item 

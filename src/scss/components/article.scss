@@ -1,0 +1,51 @@
+.article {
+  font-size: 1.6rem;
+  color: var(--black);
+
+  span {
+    margin-bottom: 0.5em;
+    display: block;
+  }
+
+  p, a {
+    span {
+      display: inline;
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    padding-left: 2.5em;
+    padding-bottom: 1.25em;
+    float: right;
+    display: block;
+  }
+
+  h2 {
+    display: block;
+  }
+
+  &--pb {
+    p:last-child {
+      padding-bottom: 0;
+    } 
+  }
+
+  li {
+    display: flex;
+    margin-bottom: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    li {
+      &::before {
+        margin-top: 6px;
+        margin-left: -12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.input {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1.1em 1.25em;
+  background: var(--white);
+  border: 1px solid var(--grey);
+  font-family: 'OpenSans', serif;
+  resize: none;
+
+  &-icon {
+    position: relative;
+    display: flex;
+
+    &__input {
+      padding-left: 3.375em;
+    }
+    
+    &__icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-60%);
+      left: 2.4em;
+
+      &--green {
+        fill: var(--green);
+      }
+    }
+  }
+
+  &-file {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--grey-light);
+    border: 1px solid var(--grey);
+    padding: 1.6em 2.4em;
+
+    &__icon {
+      margin-left: 1em;
+    }
+
+    &__text {
+      color: #757575;
+    }
+
+    &__input {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      cursor: pointer;
+      height: 100%;
+    }
+  }
+}
+
+textarea.input {
+  height: 84px;
+}

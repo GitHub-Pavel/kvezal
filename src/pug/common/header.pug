@@ -1,0 +1,46 @@
+header.header
+  .container
+    .header__container
+      a(href="index.html").logo.header__logo 
+        img(src=require("@img/logo.png").default, alt="logotype").logo__img
+        // .logo__img 
+      // .logo.header__logo 
+      .header__menu-wrapper
+        include /includes/main-menu
+        .header-contacts
+          .header-contacts__item
+            svg(width="20", height="20").header-contacts__icon
+              use(href="#location")
+            // .header-contacts__icon 
+            span.text
+              | г. Санкт-Петербург
+            // .text 
+          // .header-contacts__item 
+          a(href="mailto:comfo@mail.ru").header-contacts__item
+            svg(width="20", height="20").header-contacts__icon
+              use(href="#email")
+            // .header-contacts__icon 
+            span.text
+              | comfo@mail.ru
+            // .text 
+          // .header-contacts__item 
+        // .header-contacts 
+        .header-contacts
+          a(href="tel:+78007007067").header-contacts__item
+            svg(width="20", height="20").header-contacts__icon
+              use(href="#telephone")
+            // .header-contacts__icon 
+            span.text.text--semibold
+              | +7 (800) 700 70 67
+            // .text 
+          // .header-contacts__item 
+          .header-contacts__item
+            a(data-fancybox data-src="#callback" href="javascript:;").btn.btn--green.btn--small
+              | ОБРАТНЫЙ ЗВОНОК
+            // .btn.btn--dark-green.btn--small 
+          // .header-contacts__item 
+        // .header-contacts 
+      // .header__menu-wrapper 
+    // .header__container 
+  // .container 
+// .header 

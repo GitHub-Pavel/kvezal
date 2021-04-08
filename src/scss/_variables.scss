@@ -1,0 +1,70 @@
+/*
+ * ================================================================================== 
+ * font settings
+ * ==================================================================================
+ */
+
+$thin: 100 !default;
+$extra-light: 200 !default;
+$light: 300 !default;
+$normal: 400 !default;
+$medium: 500 !default;
+$semi-bold: 600 !default;
+$bold: 700 !default;
+$semi-black: 800 !default;
+$black: 900 !default;
+
+/* 
+ * ==================================================================================
+ * colors
+ * ==================================================================================
+ */
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+
+  --green-extra-light: #30FA50;
+  --green-light: #0BC316;
+  --green: #1E7C24;
+  --dark-green: #0A510E;
+
+  --blue: #002ABE;
+
+  --section-grey: rgba(229, 229, 229, 0.3);
+  --grey: #C4C4C4;
+  --grey-light: #E5E5E5;
+  --dark-grey: #696969;
+
+  --shadow-small: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  --shadow-big: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 
+ * ==================================================================================
+ * window's size
+ * ==================================================================================
+ */
+
+ $less: 360 !default; // window size < 440px
+ $xx: 440 !default; // window size < 440px
+ $xs: 576 !default; // window size < 560px
+ $sm: 768 !default; // window size < 780px
+ $md: 992 !default; // window size < 960px
+ $lg: 1200 !default; // window size < 1100px
+ $xlg: 1400 !default; // window size < 1300px
+ $xl: 1600 !default; // window size < 1600px
+ $xxl: 1800 !default; // window size < 1800px
+
+/* 
+ * ==================================================================================
+ * default... vars for bootstrap and etc.
+ * ==================================================================================
+ */
+
+$widthContainer: 1198 !default; // size is in "px"
+
+:root {
+  --column-gap: 20px;
+  --section-padding: 60px;
+}

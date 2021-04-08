@@ -1,0 +1,24 @@
+.benefit {
+  background: linear-gradient(262.58deg, #0A510E 0%, #1E7C24 100%);
+  position: relative;
+
+  &::after {
+    content: '';
+    background: url(../img/benefit/gear-left.png);
+    width: 571px;
+    height: 424px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  &::before {
+    content: '';
+    background: url(../img/benefit/gear-right.png);
+    width: 289px;
+    height: 316px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

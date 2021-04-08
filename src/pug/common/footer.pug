@@ -1,0 +1,52 @@
+footer.footer
+  .container
+    .footer__row
+      .footer__column.footer__column--logo
+        a(href="index.html").logo.footer__logo
+          img(src=require("@img/logo-footer.png").default, alt="logotype").logo__img
+          // .logo__img 
+        // .logo.footer__logo 
+      // .footer__column.footer__column--logo 
+      .footer__column.footer__column--menu
+        ul.footer__menu
+          li
+            a(href="") Расчет стоимости
+          li
+            a(href="") Продукция
+          li
+            a(href="") Услуги
+          li
+            a(href="") Контакты
+        // .footer__menu 
+      // .footer__column.footer__column--menu 
+      .footer__column.footer__column--btns
+        a(href="").footer__btn.btn.btn--md.btn--shadow_big РАСЧИТАТЬ СТОИМОСТЬ
+        a(data-fancybox data-src="#callback" href="javascript:;").footer__btn.btn.btn--md.btn--shadow_big.btn--white ОБРАТНЫЙ ЗВОНОК
+      // .footer__column.footer__column--btns 
+      .footer__column.footer__column--contacts
+        a(href="tel:+78007007067").footer__item
+          svg(width="20", height="20").footer__icon
+            use(href="#telephone")
+          // .footer__icon 
+          span.text.text--white +7 (800) 700 70 67
+        // .footer__item 
+        .footer__item
+          svg(width="20", height="20").footer__icon
+            use(href="#location")
+          // .footer__icon 
+          span.text.text--white г. Санкт-Петербург
+        // .footer__item 
+        a(href="mailto:comfo@mail.ru").footer__item
+          svg(width="20", height="20").footer__icon
+            use(href="#email")
+          // .footer__icon 
+          span.text.text--white comfo@mail.ru
+        // .footer__item 
+      // .footer__column.footer__column--contacts 
+    // .footer__row 
+    .footer__bottom-row
+      .text.text--grey © ООО «Квезаль» 2021
+      a(href="").text.text--grey.link Политика конфиденциальности
+    // .footer__bottom-row 
+  // .container 
+// .footer 

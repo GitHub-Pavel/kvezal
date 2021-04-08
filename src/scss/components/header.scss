@@ -1,0 +1,28 @@
+.header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: $medium;
+  position: relative;
+  z-index: 2;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    margin-right: 4.5em;
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+  }
+
+  &__menu-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1 1;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

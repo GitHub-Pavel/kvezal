@@ -1,0 +1,78 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --open",
+    "fonts": "gulp converter",
+    "svg": "gulp svg"
+  },
+  "keywords": [
+    "webpack",
+    "pug",
+    "sass",
+    "scss",
+    "js",
+    "babel"
+  ],
+  "author": "GitHub-Pavel",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^8.1.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.2.0",
+    "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-ttf2eot": "^1.1.2",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-watch": "^5.0.1",
+    "html-webpack-plugin": "^5.3.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "imagemin-webpack": "^5.1.1",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "mini-css-extract-plugin": "^1.4.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.9",
+    "postcss-loader": "^5.2.0",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^11.0.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ],
+  "paths": {
+    "dist": "./dist",
+    "src": "./src"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "animate.css": "^4.1.1",
+    "blazy": "^1.8.2",
+    "gsap": "^3.6.1",
+    "jquery": "^3.6.0"
+  }
+}

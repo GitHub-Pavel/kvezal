@@ -1,0 +1,11 @@
+.section {
+  padding: var(--section-padding) 0;
+
+  &--grey {
+    background: var(--section-grey);
+  }
+
+  &--pt {
+    padding-top: 0;
+  }
+}

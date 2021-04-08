@@ -1,0 +1,19 @@
+.modal {
+  display: none;
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  max-width: 41em;
+  padding: 4em;
+
+  &__close {
+    padding: 15px 15px 10px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.fancybox-bg {
+  background: rgba(0, 0, 0, 0.8);
+}

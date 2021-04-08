@@ -1,0 +1,40 @@
+.lower-menu {
+  list-style: none;
+  border-left: 5px solid var(--green-light);
+  padding-left: 15px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  border-bottom: 1px solid var(--grey-light);
+
+  &__item {
+    &::before {
+      display: none;
+    }
+  }
+
+  &__link {
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    font-size: 1.6rem;
+    color: var(--black);
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 1px;
+      background: var(--green);
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      transition: width .2s linear;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

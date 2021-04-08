@@ -1,0 +1,53 @@
+.canvas {
+  position: relative;
+  background: var(--white);
+
+  &--grey {
+    background: var(--section-grey);
+  }
+
+  &--mb {
+    &::after {
+      content: '';
+      background: inherit;
+      width: 100%;
+      height: var(--section-padding);
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  &__rec {
+    display: grid;
+    grid-gap: 1.2em;
+    position: absolute;
+    z-index: -1;
+
+    &--top_left {
+      top: 15px;
+      right: calc(100% + 35px);
+    }
+
+    &--top_right {
+      top: -48px;
+      right: -48px;
+    }
+
+    &--bottom_left {
+      bottom: -48px;
+      left: -48px;
+    }
+
+    &--bottom_right {
+      bottom: -48px;
+      right: -48px;
+    }
+  }
+
+  &__square {
+    width: 1.2em;
+    height: 1.2em;
+    background: linear-gradient(0deg, rgba(11, 196, 22, 0.32), rgba(11, 196, 22, 0.32));
+  }
+}

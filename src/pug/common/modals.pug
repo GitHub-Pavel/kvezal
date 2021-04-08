@@ -1,0 +1,22 @@
+.modal.animate__animated.animate__faster#callback
+  button.modal__close
+    svg(width="26", height="26").modal__icon
+      use(href="#times")
+    // .modal__icon 
+  // .modal__close 
+  form.prompt-form
+    h4.h4.text--center Оставьте свои данные и мы перезвоним Вам
+    label.input-icon
+      svg(width="20", height="20").input-icon__icon.input-icon__icon--green
+        use(href="#user")
+      // .input-icon__icon.input-icon__icon--green 
+      input(type="text", placeholder="Ваше имя").input.input-icon__input
+    // .input-icon 
+    label.input-icon
+      svg(width="20", height="20").input-icon__icon.input-icon__icon--green
+        use(href="#phone")
+      // .input-icon__icon.input-icon__icon--green 
+      input(type="text", placeholder="Ваш телефон").input.input-icon__input
+    // .input-icon 
+    button(type="submit").btn.btn--big Отправить
+  // .prompt-form 

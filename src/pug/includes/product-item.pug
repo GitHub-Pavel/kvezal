@@ -1,0 +1,11 @@
+mixin product-item(img, title, desc)
+  a(href="").product-item
+    img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=require("@img/product/"+img+".jpg").default, alt=title , width="283", height="200").product-item__img.b-lazy
+    // .product-item__img 
+    .product-item__content
+      h5.h5.product-item__title= title
+      // .h5.product-item__title 
+      .text= desc
+      // .text 
+    // .product-item__content 
+  // .product-item 
