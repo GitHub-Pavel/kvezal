@@ -12,8 +12,25 @@
     top: 0;
     right: 0;
   }
+
+  @media (max-width: $sm + px) {
+    padding: 4em 2em;
+
+    &__icon {
+      width: 1.4em;
+      height: 1.4em;
+    }
+
+    &__close {
+      padding: 10px;
+    }
+  }
 }
 
 .fancybox-bg {
   background: rgba(0, 0, 0, 0.8);
+}
+
+.fancybox-slide {
+  padding: 1.5em;
 }

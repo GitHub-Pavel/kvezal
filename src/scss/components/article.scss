@@ -42,9 +42,46 @@
 
   ul {
     li {
+      position: relative;
+      margin-left: 4px;
+
       &::before {
         margin-top: 6px;
         margin-left: -12px;
+        position: absolute;
+        left: -4px;
+      }
+    }
+  }
+
+  @media (max-width: $md + px) {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      float: none;
+      padding-left: 0;
+      width: 100%;
+      max-height: 20em;
+      object-fit: cover;
+    }
+
+    h2 {
+      padding-bottom: 1em;
+    }
+
+    &--title_first {
+      ul, h3, h4, h5, h6, p, a, span, ol, img {
+        order: 2;
+      }
+
+      h2 {
+        order: 0;
+        padding-bottom: 2em;
+      }
+
+      img:first-child {
+        order: 1;
       }
     }
   }

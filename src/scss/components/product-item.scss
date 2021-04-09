@@ -12,6 +12,8 @@
 
   &__img {
     width: 100%;
+    max-height: 20em;
+    object-fit: cover;
   }
 
   &__content {
@@ -20,5 +22,6 @@
 
   &__title {
     padding-bottom: 1.1em;
+    box-sizing: content-box;
   }
 }

@@ -4,5 +4,11 @@
     grid-template-columns: repeat(6, 1fr);
     padding-top: 3em;
     padding-bottom: 1.5em;
+
+    @media (max-width: 999px) {
+      grid-template-columns: 1fr;
+      padding-top: 2em;
+      padding-bottom: 0;
+    }
   }
 }

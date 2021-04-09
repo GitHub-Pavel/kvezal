@@ -78,4 +78,21 @@
       }
     }
   }
+
+  @media (max-width: $sm + px) {
+    &__icon {
+      width: 5em;
+      height: 5em;
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+
+    &__content {
+      padding-bottom: 3em;
+    }
+
+    &__list {
+      padding: 1em 1em 0 1em;
+    }
+  }
 }

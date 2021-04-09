@@ -51,7 +51,7 @@ $black: 900 !default;
  $less: 360 !default; // window size < 440px
  $xx: 440 !default; // window size < 440px
  $xs: 576 !default; // window size < 560px
- $sm: 768 !default; // window size < 780px
+ $sm: 830 !default; // window size < 780px
  $md: 992 !default; // window size < 960px
  $lg: 1200 !default; // window size < 1100px
  $xlg: 1400 !default; // window size < 1300px
@@ -69,4 +69,8 @@ $widthContainer: 1198 !default; // size is in "px"
 :root {
   --column-gap: 20px;
   --section-padding: 60px;
+
+  @media (max-width: $md + px) {
+    --section-padding: 40px;
+  }
 }

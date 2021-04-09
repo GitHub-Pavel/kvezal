@@ -90,14 +90,61 @@ ul {
 
     &--lg {
         grid-template-columns: repeat(6, 1fr);
+
+        @media (max-width: $lg + px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @media (max-width: $md + px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: $sm + px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: $xs + px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $less + px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &--md {
         grid-template-columns: repeat(4, 1fr);
+
+        @media (max-width: $lg + px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: $sm + px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $xs + px) {
+            grid-template-columns: 1fr;
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+
+        @media (max-width: $less + px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     &--sm {
         grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width: $lg + px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $sm + px) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 

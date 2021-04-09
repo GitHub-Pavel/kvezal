@@ -1,3 +1,10 @@
+a(data-fancybox data-src="#callback" href="javascript:;").btn.btn--dark_green.btn--mobile
+  svg(width="20", height="20").btn__icon
+    use(href="#telephone")
+  // .btn__icon 
+  | ОБРАТНЫЙ ЗВОНОК
+// .btn.btn--dark_green.btn--mobile 
+
 header.header
   .container
     .header__container
@@ -5,6 +12,11 @@ header.header
         img(src=require("@img/logo.png").default, alt="logotype").logo__img
         // .logo__img 
       // .logo.header__logo 
+      a(href="#").header__ham
+        span
+        span
+        span
+      // .ham 
       .header__menu-wrapper
         include /includes/main-menu
         .header-contacts
@@ -24,8 +36,16 @@ header.header
               | comfo@mail.ru
             // .text 
           // .header-contacts__item 
+          a(href="tel:+78007007067").header-contacts__item.header-contacts__item--menu
+            svg(width="20", height="20").header-contacts__icon
+              use(href="#telephone")
+            // .header-contacts__icon 
+            span.text
+              | +7 (800) 700 70 67
+            // .text 
+          // .header-contacts__item 
         // .header-contacts 
-        .header-contacts
+        .header-contacts.header-contacts--menu
           a(href="tel:+78007007067").header-contacts__item
             svg(width="20", height="20").header-contacts__icon
               use(href="#telephone")

@@ -34,6 +34,12 @@
       transition: width .2s linear;
     }
 
+    &--active {
+      &::after {
+        width: 100%;
+      }
+    }
+
     &:hover {
       &::after {
         width: 100%;
@@ -44,6 +50,10 @@
         top: 100%;
         visibility: visible;
         transition: top .3s, opacity .3s, visibility 0ms;
+
+        @media (max-width: $lg + px) {
+          top: 0;
+        }
       }
     }
   }
@@ -57,13 +67,93 @@
     height: 8.75em;
     color: var(--black);
     white-space: nowrap;
+    transition: color .2s, background .2s;
   }
 
   &__icon {
     margin-bottom: 1px;
+    transition: fill .2s;
   }
 
   &__sub-menu {
     width: 350px;
+  }
+
+  @media (max-width: $lg + px) {
+    display: flex;
+    width: 100%;
+
+    &__list {
+      margin-left: 0;
+      margin-right: 0;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+    }
+
+    &__item {
+      margin-right: 0;
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+
+      &:hover {
+        &::after {
+          width: 0; 
+        }
+      }
+
+      &:hover, &.main-menu__item--active {
+        .main-menu__link {
+          background: var(--green-light);
+        }
+      }
+
+      &--many {
+        &.main-menu__item--open {
+          .main-menu__link {
+            color: var(--white);
+            background: var(--green-light);
+          }
+
+          .main-menu__icon {
+            fill: var(--white);
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: auto;
+          height: 41px;
+          width: 50px;
+          z-index: 8;
+          background: transparent;
+        }
+
+        &:hover {
+          &::after {
+            width: 50px;
+          }
+        } 
+      }
+    }
+
+    &__link {
+      height: auto;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding: 10px 15px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
   }
 }

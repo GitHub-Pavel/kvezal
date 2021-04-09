@@ -53,13 +53,24 @@ label {
     background: var(--grey-light);
     border: 1px solid var(--grey);
     padding: 1.6em 2.4em;
+    height: 5.4em;
 
     &__icon {
       margin-left: 1em;
+
+      @media (max-width: $less + px) {
+        width: 1.6em;
+        height: 1.6em;
+        margin-left: 0.8em;
+      }
     }
 
     &__text {
       color: #757575;
+
+      @media (max-width: $less + px) {
+        font-size: 1.3rem;
+      }
     }
 
     &__input {
@@ -70,6 +81,30 @@ label {
       width: 100%;
       cursor: pointer;
       height: 100%;
+    }
+  }
+
+  @media (max-width: $sm + px) {
+    padding: 1em .625em;
+
+    &-icon {
+      &__input {
+        padding-left: 3.375em;
+      }
+    }
+
+    &-file {
+      padding: 1em;
+  
+      &__icon {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  @media (max-width: $less + px) {
+    &-file {
+      padding: .8em;
     }
   }
 }

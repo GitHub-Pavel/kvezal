@@ -18,7 +18,7 @@ export default $(function() {
   handler();
 
   $('body').on('DOMSubtreeModified', '.services-item__title', handler);
-
+  $(window).on('resize', handler);
 
   $('body').on('mouseenter', '.services-item', (e) => {
     $(e.currentTarget).find('.services-item__content').addClass('services-item__content--active').find('.services-item__list').stop().slideDown(speed);

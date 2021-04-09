@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
 
+  & .btn {
+    height: 54px;
+  }
+
   &__desc,&__form-wrapper {
     width: calc(50% + var(--space));
   }
@@ -104,6 +108,60 @@
 
     &__textarea {
       display: none;
+    }
+  }
+
+  @media (max-width: $lg + px) {
+    --space: 0;
+    flex-direction: column;
+
+    &__desc {
+      width: calc(100% + 30px);
+      margin: 0;
+    }
+
+    &__form-wrapper {
+      margin-top: -2em;
+    }
+  }
+
+  @media (max-width: $md + px) {
+    padding-bottom: 4em;
+
+    &__form-wrapper {
+      grid-gap: 2em;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: $md + px) {
+    &__form-wrapper {
+      grid-template-columns: 1fr;
+      background-position: right bottom;
+    }
+
+    &__desc {
+      &-content {
+        padding: 4em 15px;
+      }
+    }
+
+    &__title {
+      margin-left: 15px;
+    }
+
+    &__list {
+      li {
+        margin-bottom: 0.975em;
+        position: relative;
+        padding-left: 0.4em;
+
+        &::before {
+          position: absolute;
+          top: 9px;
+          left: 0px;
+        }
+      }
     }
   }
 }

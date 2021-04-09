@@ -13,4 +13,14 @@
   &__icon {
     margin-right: 2.5em;
   }
+
+  @media (max-width: $sm + px) {
+    padding: 2em;
+
+    &__icon {
+      margin-right: 2em;
+      height: 4em;
+      width: 4em;
+    }
+  }
 }

@@ -15,6 +15,7 @@ import '@modules/canvas';
 import '@modules/modals';
 import '@modules/stages-anim';
 import '@modules/message';
+import '@modules/product-item';
 
 import loadSprite from '@modules/loadSprite';
 import SVGSprite from '@img/sprite.svg';

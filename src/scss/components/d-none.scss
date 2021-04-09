@@ -1,0 +1,9 @@
+.d {
+  &-lg {
+    &-none {
+      @media (max-width: $lg + px) {
+        display: none;
+      }
+    }
+  }
+}
