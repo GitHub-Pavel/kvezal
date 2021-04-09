@@ -90,6 +90,8 @@
   }
 
   @media (max-width: $lg + px) {
+    margin-bottom: 60px;
+
     &__row {
       grid-template-columns: 1.5fr 1.3fr 2.1fr 1.2fr;
     }
@@ -115,7 +117,7 @@
     &__bottom-row {
       margin-top: 4em;
       border-top: none;
-      padding-bottom: 10em;
+      padding-bottom: 4em;
       padding-top: 0;
       grid-template-columns: 1fr;
     }
