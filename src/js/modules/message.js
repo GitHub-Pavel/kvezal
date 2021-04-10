@@ -5,11 +5,15 @@ export default $(function() {
     e.preventDefault();
     const textarea = $(e.currentTarget).closest('.prompt-form').find('.prompt-form__textarea');
     const btn = $(e.currentTarget);
+    const form = textarea.closest('.prompt__form-wrapper');
+
+    form.toggleClass('prompt__form-wrapper--active');
     btn.animate({width: 'toggle', marginLeft: 'toggle', paddingLeft: 'toggle', paddingRight: 'toggle'}, () => {
-      textarea.animate({height: 'toggle', paddingTop: 'toggle', paddingBottom: 'toggle'}, () => {
+      textarea.animate({height: 'toggle', paddingTop: 'toggle', paddingBottom: 'toggle', marginBottom: 'toggle'}, () => {
         const animRev = () => {
           textarea.off('blur');
-          textarea.animate({height: 'toggle', paddingTop: 'toggle', paddingBottom: 'toggle'}, () => {
+          form.toggleClass('prompt__form-wrapper--active');
+          textarea.animate({height: 'toggle', paddingTop: 'toggle', paddingBottom: 'toggle', marginBottom: 'toggle'}, () => {
             btn.animate({width: 'toggle', marginLeft: 'toggle', paddingLeft: 'toggle', paddingRight: 'toggle'});
           });
         };

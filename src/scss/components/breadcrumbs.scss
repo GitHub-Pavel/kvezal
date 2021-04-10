@@ -1,0 +1,35 @@
+.breadcrumbs {
+  margin-bottom: 1.25em;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    display: flex;
+    
+    &::before {
+      display: none;
+    }
+  }
+
+  &__link {
+    padding: 0;
+    padding-bottom: .25em;
+    border-bottom: 1px solid var(--green-extra-light);
+    color: var(--white);
+    transition: color .2s;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--green-extra-light);
+    }
+  }
+
+  &__icon {
+
+    margin-left: 0.562em;
+    margin-right: 0.562em;
+    margin-top: 0.275em;
+    fill: var(--grey);
+  }
+}

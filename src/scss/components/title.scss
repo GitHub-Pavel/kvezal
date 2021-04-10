@@ -55,6 +55,10 @@
       --title-margin: 40px;
     }
   }
+
+  &--pb {
+    padding-bottom: 0;
+  }
   
   &--line_right {
     &::after {
