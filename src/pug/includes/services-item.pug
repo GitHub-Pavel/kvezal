@@ -4,7 +4,8 @@ mixin services-item(img, title)
       svg(width="70", height="70").services-item__icon
         use(href="#services--" + img)
       // .services-item__icon 
-      h5.services-item__title= title
+      h5.services-item__title 
+        a(href="")= title
       // .services-item__title 
       ul.services-item__list
         li.services-item__list-item

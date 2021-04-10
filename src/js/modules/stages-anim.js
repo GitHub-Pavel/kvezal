@@ -30,8 +30,9 @@ export default $(function() {
       opacity: 1
     },
     lineThree: {
-      duration: durAll, 
-      width: 'calc(100% - var(--num-size))'
+      duration: 0.7, 
+      width: 'calc(100% - var(--num-size))',
+      ease: 'none'
     },
     num: {
       duration: durAll, 
@@ -75,31 +76,31 @@ export default $(function() {
           .to(lineOne[0], typeAnim['odd']['lineOne'])
           .to(lineTwo[0], typeAnim['odd']['lineTwo'])
           .to(lineThree[0], typeAnim['lineThree'])
-          .to(num[1], typeAnim['num'], '-=0.3')
+          .to(num[1], typeAnim['num'], '-=0.2')
           .to(lineOne[1], typeAnim['even']['lineOne'])
           .to(lineTwo[1],  typeAnim['even']['lineTwo'])
           .to(title[1], typeAnim['title'])
           .to(img[1], typeAnim['img'], '-=0.5')
           .to(lineThree[1], typeAnim['lineThree'])
-          .to(num[2], typeAnim['num'], '-=0.3')
+          .to(num[2], typeAnim['num'], '-=0.2')
           .to(lineOne[2], typeAnim['odd']['lineOne'])
           .to(lineTwo[2],  typeAnim['odd']['lineTwo'])
           .to(title[2], typeAnim['title'])
           .to(img[2], typeAnim['img'], '-=0.5')
           .to(lineThree[2], typeAnim['lineThree'])
-          .to(num[3], typeAnim['num'], '-=0.3')
+          .to(num[3], typeAnim['num'], '-=0.2')
           .to(lineOne[3], typeAnim['even']['lineOne'])
           .to(lineTwo[3],  typeAnim['even']['lineTwo'])
           .to(title[3], typeAnim['title'])
           .to(img[3], typeAnim['img'], '-=0.5')
           .to(lineThree[3], typeAnim['lineThree'])
-          .to(num[4], typeAnim['num'], '-=0.3')
+          .to(num[4], typeAnim['num'], '-=0.2')
           .to(lineOne[4], typeAnim['odd']['lineOne'])
           .to(lineTwo[4],  typeAnim['odd']['lineTwo'])
           .to(title[4], typeAnim['title'])
           .to(img[4], typeAnim['img'], '-=0.5')
           .to(lineThree[4], typeAnim['lineThree'])
-          .to(num[5], typeAnim['num'], '-=0.3')
+          .to(num[5], typeAnim['num'], '-=0.2')
           .to(lineOne[5], typeAnim['even']['lineOne'])
           .to(lineTwo[5],  typeAnim['even']['lineTwo'])
           .to(title[5], typeAnim['title'])
