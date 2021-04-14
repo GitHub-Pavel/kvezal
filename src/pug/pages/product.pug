@@ -3,7 +3,7 @@ extends /common/layout
 block content
   section.hero
     .hero__video-wrapper
-      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/hero/0.jpg", width="1920", height="240").hero__video.b-lazy
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=require("@img/hero/0.jpg").default, width="1920", height="240").hero__video.b-lazy
     // .hero__video-wrapper 
     .hero__content
       .container
@@ -41,7 +41,7 @@ block content
               // .h3.product-price__title 
             // .product-price 
             .product-btns
-              a(href="").btn.btn--md
+              a(data-fancybox data-src="#callback" href="javascript:;").btn.btn--md
                 | ЗАКАЗАТЬ
               // .btn.btn--md 
               a(href="").btn.btn-product.product__btn
