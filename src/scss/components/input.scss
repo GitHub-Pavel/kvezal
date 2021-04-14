@@ -13,6 +13,19 @@ label {
   resize: none;
   transition: box-shadow .2s, border-color .2s;
 
+  &-label {
+    &__text {
+      margin-bottom: 8px;
+    }
+  }
+
+  &[type='number'] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+
   &:focus {
     border-color: var(--dark-blue);
     box-shadow: 0px 1px 10px rgba(0, 10, 97, 0.2);
@@ -110,7 +123,7 @@ label {
 }
 
 textarea.input {
-  height: 84px;
+  height: 114px;
 }
 
 .error {
@@ -119,7 +132,7 @@ textarea.input {
     margin-top: 0.5em;
   }
 
-  & .error__text {
+  & &__text {
     display: block;
   }
 
@@ -129,4 +142,87 @@ textarea.input {
       box-shadow: 0px 1px 10px rgba(211, 36, 32, 0.2);
     }
   }
+}
+
+input.invalid {
+  &, &:focus {
+    border-color: var(--red);
+    box-shadow: 0px 1px 10px rgba(211, 36, 32, 0.2);
+  }
+}
+
+.check {
+  display: inline-flex;
+  flex-direction: row;
+  cursor: pointer;
+
+  &__box {
+    width: 19px;
+    height: 19px;
+    border: 1px solid var(--grey);
+    background: var(--white);
+    margin-right: 10px;
+    flex-basis: 19px;
+    margin-top: 1px;
+    position: relative;
+    transition: background .2s, border-color .2s;
+  }
+
+  &__input:checked + &__box {
+    background: var(--green);
+    border-color: var(--green);
+  }
+
+  &__text {
+    flex: 1 1;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: var(--white);
+  }
+}
+
+.radio {
+  display: inline-flex;
+  flex-direction: row;
+  cursor: pointer;
+  width: 100%;
+
+  &__box {
+    width: 19px;
+    height: 19px;
+    border: 1px solid var(--grey);
+    background: var(--white);
+    margin-right: 10px;
+    flex-basis: 19px;
+    margin-top: 1px;
+    position: relative;
+    border-radius: 50%;
+    transition: background .2s, border-color .2s;
+  }
+
+  &__input:checked + &__box {
+    background: var(--green);
+    border-color: var(--green);
+  }
+
+  &__text {
+    flex: 1 1;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: var(--white);
+  }
+}
+
+input:disabled, textarea:disabled {
+  background: var(--grey-light);
 }

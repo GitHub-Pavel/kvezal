@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(function() {
+export default $(function() {
   const items = $('.canvas__rec');
 
   items.each(function() {

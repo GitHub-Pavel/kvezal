@@ -74,11 +74,13 @@
       top: 50%;
       right: 0;
       transform: translateY(-50%);
-      transition: top .6s, transform .58s .05s;
+      transition: top .3s ease-in-out, transform .3s ease-in-out .03s;
+      z-index: 2;
 
       &--active {
         top: 0;
         transform: translateY(0);
+        transition: top .4s ease-in-out, transform .39s ease-in-out .03s;
       }
     }
 
@@ -107,6 +109,10 @@
     display: flex;
     flex-direction: column;
 
+    &__title {
+      margin-bottom: 20px;
+    }
+
     &__row {
       display: flex;
       margin-bottom: 2em;
@@ -123,6 +129,7 @@
     &__textarea {
       display: none;
       margin-bottom: 1.25em;
+      height: 84px;
     }
 
     &__label {

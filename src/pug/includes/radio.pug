@@ -1,0 +1,13 @@
+mixin radio(name, value, text, check)
+  label.radio 
+    if check
+      input(type="radio", name=name, value=value, checked).radio__input.visually-hidden
+    else 
+      input(type="radio", name=name, value=value).radio__input.visually-hidden
+    span.radio__box
+      svg(width="14", height="10").radio__icon
+        use(href="#check")
+      // .radio__icon 
+    span.text.radio__text= text
+    // .text.radio__text 
+  // .radio 

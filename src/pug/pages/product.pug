@@ -1,0 +1,91 @@
+extends /common/layout
+
+block content
+  section.hero
+    .hero__video-wrapper
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/hero/0.jpg", width="1920", height="240").hero__video.b-lazy
+    // .hero__video-wrapper 
+    .hero__content
+      .container
+        include /includes/breadcrumbs
+      // .container 
+    // .hero__content 
+  // .hero 
+
+  section.section.product
+    .container
+      .row.row--xs.product__row
+        .product-slider
+          .product-slider__big
+            - for(let i=0; i<7; i++)
+              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-lazy=require("@img/slider-big.jpg").default, width="590", height="410").product-slider__img
+          // .product-slider__big 
+          .product-slider__thumb
+            - for(let i=0; i<7; i++)
+              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-lazy=require("@img/slider-thumb.jpg").default, width="102", height="67").product-slider__img
+          // .product-slider__thumb 
+          .product-slider__pagination
+          // .product-slider__pagination 
+        // .product-slider 
+        div
+          .product-description
+            h1.h2.product-description__title
+              | Элементы вентиляции
+            // .h2.product-description__title 
+            .product-price
+              .text.product-price__text
+                | Цена:
+              // .text.product-price__text 
+              h3.h3.product-price__title
+                | от 100 руб.
+              // .h3.product-price__title 
+            // .product-price 
+            .product-btns
+              a(href="").btn.btn--md
+                | ЗАКАЗАТЬ
+              // .btn.btn--md 
+              a(href="").btn.btn-product.product__btn
+                | Расчитать стоимость
+              // .btn.btn-product.product__btn 
+            // .product-btns 
+            table.product-table
+              tr
+                th(colspan="2") 
+                  h5.h5 Характеристики
+              tr
+                td 
+                  .text.text--dark_grey Материал
+                td
+                  .text.text--bold Сталь
+              tr
+                td 
+                  .text.text--dark_grey Ширина, мм
+                td
+                  .text.text--bold от 40
+              tr
+                td 
+                  .text.text--dark_grey Длина, мм
+                td
+                  .text.text--bold до 12000
+              tr
+                td 
+                  .text.text--dark_grey Толщина материала, мм
+                td
+                  .text.text--bold от 0.4
+            // .product-table 
+          // .product-description 
+      // .row.row--xs 
+    // .container 
+  // .section.product 
+
+  section.section
+    .container
+      h2.h2.h2--line_left.h2--lg
+        | ОПИСАНИЕ ИЗДЕЛИЯ
+      // .h2.h2--line_left.h2--lg 
+      .article
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      // .article 
+    // .container 
+  // .section 

@@ -1,0 +1,62 @@
+.pagination {
+  --pag-size: 39px;
+
+  display: grid;
+  grid-template-columns: repeat(7, var(--pag-size));
+  gap: 1px;
+  background: var(--grey);
+  border: 1px solid var(--grey);
+
+  &__text, &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__text {
+    color: var(--black);
+    transition: color .2s;
+  }
+
+  &__icon {
+    fill: var(--black);
+    transition: fill .2s;
+  }
+
+  &__btn {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    text-decoration: none;
+    background: var(--white);
+    color: var(--black);
+    transition: background .2s;
+
+    &:hover, &--active {
+      background: var(--green);
+      
+      .pagination__text {
+        color: var(--white);
+      }
+      
+      .pagination__icon {
+        fill: var(--white);
+      }
+    }
+
+    &--off {
+      background: var(--white) !important;
+
+      .pagination {
+        &__icon {
+          fill: var(--grey) !important;
+        }
+
+        &__text {
+          color: var(--grey) !important;
+        }
+      }
+    }
+  }
+}

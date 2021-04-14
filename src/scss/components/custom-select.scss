@@ -1,0 +1,58 @@
+.ui-selectmenu-button.ui-button {
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: "OpenSans", sans-serif;
+  padding: 1.1em 1.25em;
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--grey);
+
+  &:focus {
+    outline: none;
+  }
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 3px;
+    background: var(--black);
+    top: 50%;
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(45deg);
+    right: 27px;
+  }
+
+  &::before {
+    transform: translateY(-50%) rotate(-45deg);
+    right: 33px;
+  }
+}
+
+.ui-selectmenu-menu .ui-menu {
+  background: var(--white);
+  border: 1px solid var(--grey);
+  border-top: none;
+  padding: 0;
+
+  li {
+    &::before {
+      display: none;
+    }
+  }
+
+  .ui-state-active, .ui-menu-item-wrapper {
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    transition: background .2s;
+  }
+
+  .ui-state-active {
+    background: var(--grey);
+  }
+}

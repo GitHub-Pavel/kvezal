@@ -19,14 +19,15 @@
 
 .h2, h2 {
   --title-margin: 40px;
+  --font-size: 3.5rem;
 
-  font-size: 3.5rem;
+  font-size: var(--font-size);
   padding-bottom: var(--title-margin);
   position: relative;
   display: inline-block;
 
   @media (max-width: $md + px) {
-    font-size: 2rem;
+    --font-size: 2rem;
     --title-margin: 30px;
   }
 }
@@ -64,7 +65,7 @@
     &::after {
       content: '';
       position: absolute;
-      top: calc(50% - var(--title-margin) / 2);
+      top: calc(var(--font-size) / 2 + 2px);
       left: calc(100% + var(--line-margin));
       width: 100vw;
       height: 2px;
@@ -80,7 +81,7 @@
     &::before {
       content: '';
       position: absolute;
-      top: calc(50% - var(--title-margin) / 2);
+      top: calc(var(--font-size) / 2 + 2px);
       right: calc(100% + var(--line-margin));
       width: 100vw;
       height: 2px;
@@ -102,6 +103,10 @@
     display: block;
     text-align: center;
   }
+
+  &--tt_n {
+    text-transform: none;
+  }
 }
 
 .h3, h3 {
@@ -109,6 +114,16 @@
 
   @media (max-width: $md + px) {
     font-size: 1.8rem;
+  }
+}
+
+.h3 {
+  &--pb_md {
+    padding-bottom: 1.666em;
+
+    @media (max-width: $sm + px) {
+      padding-bottom: 1.125em;
+    }
   }
 }
 

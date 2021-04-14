@@ -1,0 +1,28 @@
+.icon-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__icon {
+    fill: var(--green);
+    margin-right: 8px;
+  }
+
+  &__text {
+    transition: color .2s;
+  }
+}
+
+a.icon-list__item {
+  &:hover {
+    .icon-list__text {
+      color: var(--green);
+    }
+  }
+}

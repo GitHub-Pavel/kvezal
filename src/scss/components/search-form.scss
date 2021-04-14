@@ -1,0 +1,47 @@
+.search-form {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border: 1px solid var(--grey);
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    fill: var(--green);
+
+    @media (max-width: $sm + px) {
+      position: static;
+      transform: translateY(0);
+      top: none;
+      left: none;
+      fill: var(--white);
+    }
+  }
+
+  &__input {
+    padding: 1em .812em;
+    padding-left: 3.75em;
+    flex: 1 1;
+    font-size: 1.6rem;
+
+    @media (max-width: $sm + px) {
+      padding-left: 0.812em;
+    }
+  }
+
+  &__btn {
+    padding: 1em 2.5em;
+
+    @media (max-width: $sm + px) {
+      padding: 1em;
+    }
+  }
+
+  &__text {
+    @media (max-width: $sm + px) {
+      display: none;
+    }
+  }
+}

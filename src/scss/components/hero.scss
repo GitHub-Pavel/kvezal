@@ -6,6 +6,11 @@
   padding-top: 4em;
   padding-bottom: 4em;
 
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
   &--main {
     height: calc(100vh - 140px);
     min-height: 60em;
@@ -109,5 +114,9 @@
       width: 40px;
       height: 40px;
     }
+  }
+
+  &__order {
+    margin-top: 20px;
   }
 }

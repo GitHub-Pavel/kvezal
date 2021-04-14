@@ -1,0 +1,14 @@
+.slick {
+  &-arrow {
+    svg {
+      fill: var(--grey);
+      transition: fill .3s;
+    }
+
+    &:hover {
+      svg {
+        fill: var(--black);
+      }
+    }
+  }
+}

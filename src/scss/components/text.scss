@@ -8,6 +8,8 @@ p {
   font-size: 1.6rem;
   color: var(--black);
   padding-bottom: 0;
+  font-weight: $normal;
+  font-family: "OpenSans", sans-serif;
 
   &--big {
     font-size: 1.8rem;

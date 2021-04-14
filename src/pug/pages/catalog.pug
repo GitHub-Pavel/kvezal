@@ -1,0 +1,95 @@
+extends /common/layout
+
+block content
+  include /includes/catalog-item
+  include /includes/checkbox
+
+  include /includes/hero
+
+  section.section.catalog
+    .container
+      .catalog__content
+        .catalog__filter
+          a(href="#filter").catalog-btn.h3
+            span.catalog-btn__text
+              | Фильтр
+            // .catalog-btn__text 
+            span.catalog-btn__icons
+              svg(width="30", height="30").catalog-btn__icon.catalog-btn__icon--filter
+                use(href="#filter")
+              // .catalog-btn__icon.catalog-btn__icon--filter 
+              svg(width="30", height="30").catalog-btn__icon.catalog-btn__icon--times
+                use(href="#times")
+              // .catalog-btn__icon.catalog-btn__icon--times 
+            // .catalog-btn__icons 
+          // .catalog-btn.h3 
+          form.catalog-filter
+            .catalog-filter__wrapper
+              h4.h4.catalog-filter__title
+                | Материал
+              // .h4.catalog-filter__title 
+              .catalog-filter__input
+                +checkbox('08 пс')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Алюминий')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Нержавеющая сталь')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Сталь')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Цветные металлы')
+              // .catalog-filter__input 
+            // .catalog-filter__wrapper 
+            .catalog-filter__wrapper
+              h4.h4.catalog-filter__title
+                | Отрасль
+              // .h4.catalog-filter__title 
+              .catalog-filter__input
+                +checkbox('Инфраструктура')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Машиностроение')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Медицинское оборудование')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Пищевая промышленность')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Приборостроение')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Строительство')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Торговля и реклама')
+              // .catalog-filter__input 
+              .catalog-filter__input
+                +checkbox('Элементы декора')
+              // .catalog-filter__input 
+            // .catalog-filter__wrapper 
+            a(href="#discharge").catalog-filter__discharge.btn.btn--dg_empty.btn--md
+              | СБРОСИТЬ
+            // .catalog-filter__discharge.btn.btn--dg_empty.btn--md 
+          // .catalog-filter 
+        // .catalog__filter 
+        .catalog__search-form
+          include /includes/search-form
+        // .catalog__search-form 
+        .catalog__row
+          -for(let i=0; i<3; i++)
+            +catalog-item(0, 'Конвейеры и его части')
+            +catalog-item(1, 'Элементы вентиляции')
+            +catalog-item(2, 'Направляющие')
+        // .catalog__row 
+        .catalog__pagination
+          include /includes/pagination
+        // .catalog__pagination 
+      // .catalog__content 
+    // .container 
+  // .section.catalog 

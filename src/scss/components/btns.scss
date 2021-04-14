@@ -60,6 +60,10 @@
 
   &--md {
     padding: .937em 1.75em;
+
+    @media (max-width: $xs + px) {
+      padding: .937em 1.625em;
+    }
   }
 
   &--green {
@@ -91,6 +95,96 @@
 
     &:focus {
       background: var(--green);
+    }
+  }
+
+  &--dg_empty {
+    background: var(--white);
+    border: 1px solid var(--dark-green);
+    color: var(--dark-green);
+
+    &:hover {
+      box-shadow: none;
+      color: var(--white);
+      background: var(--dark-green);
+    }
+
+    &:focus {
+      color: var(--white);
+      border: 1px solid var(--green);
+    }
+  }
+
+  &-product {
+    padding: 6px 0;
+    position: relative;
+    border: none;
+    border-bottom: 2px solid var(--dark-green);
+    color: var(--dark-green);
+    background: transparent;
+    transition: color .3s .1s;
+    text-transform: none;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: width .3s ease-in-out;
+      background: var(--green-light);
+    }
+
+    &:hover {
+      box-shadow: none;
+      color: var(--green-light);
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: $less + px) {
+      font-size: 1.4rem;
+      padding: 4px 0;
+    }
+  }
+
+  &--text {
+    background: transparent;
+    color: var(--green);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: relative;
+    border: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 0;
+      height: 2px;
+      background: var(--green);
+      transition: width .3s; 
+    }
+
+    &:hover {
+      box-shadow: none;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:focus {
+      background: transparent;
+      color: var(--green-light);
+    }
+
+    @media (max-width: $xs + px) {
+      text-transform: none;
     }
   }
 }

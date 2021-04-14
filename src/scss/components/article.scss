@@ -54,9 +54,27 @@
     }
   }
 
+  .canvas {
+    padding-left: 2.5em;
+    margin-bottom: 2.5em;
+    float: right;
+    display: inline;
+
+    img {
+      padding-left: 0;
+      padding-bottom: 0;
+      float: none;
+    }
+  }
+
   @media (max-width: $md + px) {
     display: flex;
     flex-direction: column;
+
+    .canvas {
+      float: none;
+      padding-left: 0;
+    }
 
     img {
       float: none;

@@ -1,0 +1,493 @@
+extends /common/layout
+
+block content
+  include /includes/checkbox
+  include /includes/radio
+
+  section.hero
+    .hero__video-wrapper
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/hero/0.jpg", width="1920", height="240").hero__video.b-lazy
+    // .hero__video-wrapper 
+    .hero__content
+      .container
+        include /includes/breadcrumbs
+        h1.h2.h2--pb.text--white.text--center
+          | УСЛУГИ
+        // .h1.text--white 
+        a(data-fancybox data-src="#callback" href="javascript:;").btn.btn--md.hero__order
+          | ЗАКАЗАТЬ
+        // .btn.btn--md.hero__order 
+      // .container 
+    // .hero__content 
+  // .hero 
+
+  section.section
+    .container
+      h2.h2.h2--line_left.h2--lg
+        | РАСКРОЙ МЕТАЛЛА В САНКТ-ПЕТЕРБУРГЕ ПО НИЗКОЙ ЦЕНЕ
+      // .h2.h2--line_left.h2--lg 
+      .article
+        .canvas
+          .canvas__rec.canvas__rec--size_8x7.canvas__rec--bottom_right
+          img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=require("@img/about.jpg").default, alt="about", width="584", height="372").b-lazy
+        // .canvas 
+        p Наша команда специализируется на комплексной металлообработке в Санкт-Петербурге. Мы - профессионалы, которые всегда стремятся улучшать технологию производства и повышать качество изделий для наших заказчиков. Наши менеджеры работают с максимальной самоотдачей, что позволяет производить расчеты в течение пары часов, тем самым экономя ваше время. В результате детального изучения рынка металлообработки в Санкт-Петербурге, мы имеем возможность предложить вам гибкие цены и всегда готовы пойти навстречу Заказчику.
+        p Наши ЧПУ станки и опытные операторы готовы к работам любой сложности, любой ваш проект будет выполнен качественно и быстро. Отдел технического контроля проверяет качество изделия на каждом этапе производства, это даёт Вам гарантию, а инженеры ответят на все технические вопросы и, при надобности, дадут дельный совет. Обращайтесь к нам, Вы будете довольны! Будем рады сотрудничеству!
+      // .article 
+    // .container 
+  // .section 
+
+  section.section
+    .container
+      .article
+        h2 Услуги на заказ
+        ul
+         li Предоставление качественных услуг по металлообработке в Санкт-Петербурге и России в целом.
+         li Максимальная полезность и продуктивность для Заказчиков – в срок выполнять поставленные задачи, сохраняя высочайшие стандартны качества при низкой цене.
+         li Консультировать на начальной стадии проектов, помогать оптимизировать проекты, их стоимость.
+        br
+        span Области нашей работы:
+        ol
+          li Машиностроение
+          li Инфраструктура
+          li Медицинское оборудование
+          li Пищевая промышленность
+          li Приборостроение
+          li Строительство
+          li Торговля и реклама
+          li Декор
+          li Строительство
+          li Сельское хозяйство
+      // .article 
+    // .container 
+  // .section 
+
+  section.section.price
+    .container
+      h2.h2.h2--md.h2--tt_n
+        | Стоимость раскроя металла
+      // .h2.h2--md.h2--tt_n 
+      .price__table
+        table
+          tr
+            th
+              h5 Толщина
+            th
+              h5 Черная сталь
+            th
+              h5 Нержавеющая сталь
+            th
+              h5 Алюминий
+          tr
+            td
+              .text 0,5 мм
+            td
+              .text 4,89 руб.
+            td
+              .text 14,35 руб.
+            td
+              .text 15,26 руб.
+          tr
+            td
+              .text 0,7 мм
+            td
+              .text 4,89 руб.
+            td
+              .text 
+            td
+              .text 
+          tr
+            td
+              .text 1 мм
+            td
+              .text 4,89 руб.
+            td
+              .text 16,35 руб.
+            td
+              .text 18,36 руб.
+          tr
+            td
+              .text 1,5 мм
+            td
+              .text 5,49 руб.
+            td
+              .text 21,72 руб.
+            td
+              .text 22,73 руб.
+          tr
+            td
+              .text 2 мм
+            td
+              .text 8,19 руб.
+            td
+              .text 24,22 руб.
+            td
+              .text 26,22 руб.
+          tr
+            td
+              .text 3 мм
+            td
+              .text 20,19 руб.
+            td
+              .text 47,57 руб.
+            td
+              .text 61,19 руб.
+      // .price-table 
+      .price__desc.text.text--dark_grey *В таблице представлены средние цены на раскрой металла. Точная цена зависит от времени, сложности работ и используемого оборудования.
+    // .container 
+  // .section.price 
+
+  section.section
+    .container
+      include /includes/prompt
+    // .container 
+  // .section 
+
+  section.section
+    .container
+      .steps
+        img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=require("@img/steps.jpg").default, alt="bg-image", width="794", height="443").steps__bg-img.b-lazy
+        // .steps__bg-img.b-lazy 
+        .steps__bg-white
+          .steps__container
+            .steps-header
+              .steps__title
+                h3.h3.text--center
+                  | РАСЧЕТ СТОИМОСТИ
+                // .h3.text--center 
+              // .steps__title 
+            // .steps-header 
+          // .steps__container 
+        // .steps__bg-white 
+        form.steps-form
+          h5.steps-form__header
+            span.h5.steps-form__title
+              | ПАРАМЕТРЫ ИЗДЕЛИЯ
+            // .h5.steps-form__title 
+            span.text.text--dark_grey.text--big
+              | 1/4
+            // .text.text--dark_grey.text--big 
+          // .steps-form__header 
+          .steps-form__section
+            .steps-form__row.steps-form__row--center.animate__animated
+              .steps-form__item
+                label.input-label
+                  span.input-label__text.text.text--dark_grey
+                    | Высота, мм:
+                  // .input-label__text.text.text--dark_grey 
+                  input(type="number", min="1", autocomplete="off", name="height").input.required
+                // .input-label 
+              // .steps-form__item 
+              .steps-form__item
+                label.input-label
+                  span.input-label__text.text.text--dark_grey
+                    | Ширина, мм:
+                  // .input-label__text.text.text--dark_grey 
+                  input(type="number", min="1", autocomplete="off", name="width").input.required
+                // .input-label 
+              // .steps-form__item 
+              .steps-form__item
+                label.input-label
+                  span.input-label__text.text.text--dark_grey
+                    | Толщина, мм:
+                  // .input-label__text.text.text--dark_grey 
+                  input(type="number", min="1", autocomplete="off", name="depth").input.required
+                // .input-label 
+              // .steps-form__item 
+              .steps-form__item
+                label.input-label
+                  span.input-label__text.text.text--dark_grey
+                    | Кол-во изделий:
+                  // .input-label__text.text.text--dark_grey 
+                  input(type="number", min="1", name="count-item").input.required
+                // .input-label 
+              // .steps-form__item 
+              .steps-form__item.steps-form__item--big
+                label.select-label.input-label
+                  span.input-label__text.text.text--dark_grey
+                    | Выберите материал:
+                  // .input-label__text.text.text--dark_grey
+                  select(name="material").visually-hidden
+                    option(value="Нержавеющая сталь") Нержавеющая сталь
+                    option(value="Алюминий") Алюминий
+                    option(value="Сталь") Сталь
+                // .select-label 
+              // .steps-form__item.steps-form__item--big 
+            // .steps-form__row.animate__animated 
+            .steps__bg-white
+              .steps__container
+                .steps-footer
+                  .steps-footer__row.steps-footer__row--steps_first
+                    .steps-footer__item
+                      a(href="#next").btn.btn--md
+                        | ДАЛЕЕ
+                      // .btn.btn--md
+                    //.steps-footer__item
+                  // .steps-footer__row.steps-footer__row--steps_first 
+                // .steps-footer 
+              // .steps__container 
+            // .steps__bg-white 
+          // .steps-form__section 
+          h5.steps-form__header
+            span.h5.steps-form__title
+              | ГИБКА 
+            // .h5.steps-form__title 
+            span.text.text--dark_grey.text--big
+              | 2/4
+            // .text.text--dark_grey.text--big 
+          // .steps-form__header
+          .steps-form__section
+            .steps-form__row.animate__animated
+              .steps-form__item.steps-form__item--big.steps-form__input
+                label.input-label
+                  span.input-label__text.text.text--dark_grey
+                    | Количество сгибов:
+                  // .input-label__text.text.text--dark_grey 
+                  input(type="number", min="1", name="count-folds").input.required
+                // .input-label 
+              // .steps-form__item.steps-form__item--big.steps-form__input 
+              .steps-form__item.steps-form__item--full.steps-form__check
+                label.check
+                  input(type="checkbox", name="count-folds", value="0").check__input.visually-hidden
+                  span.check__box
+                    svg(width="15", height="11").check__icon
+                      use(href="#check")
+                    // .check__icon 
+                  span.text.check__text
+                    | Без сгибов
+                  // .text.check__text 
+                // .check 
+              // .steps-form__item.steps-form__item--full.steps-form__check 
+            // .steps-form__row.animate__animated 
+            .steps__bg-white
+              .steps__container
+                .steps-footer
+                  .steps-footer__row
+                    .steps-footer__item
+                      a(href="#prev").btn.btn--dg_empty.btn--md
+                        | НАЗАД
+                      // .btn.btn--dg_empty.btn--md 
+                    // .steps-footer__item 
+                    .steps-footer__item
+                      .steps-footer__row
+                        .steps-footer__item
+                          a(href="#skip").btn.btn--text
+                            | ПРОПУСИТЬ
+                          // .btn.btn--text
+                        // .steps-footer__item
+                        .steps-footer__item
+                          a(href="#next").btn.btn--md
+                            | ДАЛЕЕ
+                          // .btn.btn--md
+                        //.steps-footer__item
+                      // .steps-footer__row 
+                    // .steps-footer__item 
+                  // .steps-footer__row 
+                // .steps-footer 
+              // .steps__container 
+            // .steps__bg-white 
+          // .steps-form__section 
+          h5.steps-form__header
+            span.h5.steps-form__title
+              | СВАРКА 
+            // .h5.steps-form__title 
+            span.text.text--dark_grey.text--big
+              | 3/4
+            // .text.text--dark_grey.text--big 
+          // .steps-form__header
+          .steps-form__section
+            .steps-form__row.animate__animated
+              .steps-form__item.steps-form__item--big
+                label.select-label.input-label
+                  span.input-label__text.text.text--dark_grey
+                    | Выберите тип сварки:
+                  // .input-label__text.text.text--dark_grey
+                  select(name="welding").visually-hidden
+                    option(value="Ручная дуговая") Ручная дуговая сварка
+                    option(value="Аргоновая") Аргоновая сварка
+                    option(value="Контактная") Контактная сварка
+                // .select-label 
+              // .steps-form__item.steps-form__item--big 
+              .steps-form__item
+                label.input-label
+                  span.input-label__text.text.text--dark_grey
+                    | Длина швов, мм:
+                  // .input-label__text.text.text--dark_grey 
+                  input(type="number", name="length").input.required
+                // .input-label 
+              // .steps-form__item 
+            // .steps-form__row.animate__animated 
+            .steps__bg-white 
+              .steps__container
+                .steps-footer
+                  .steps-footer__row
+                    .steps-footer__item
+                      a(href="#prev").btn.btn--dg_empty.btn--md
+                        | НАЗАД
+                      // .btn.btn--dg_empty.btn--md 
+                    // .steps-footer__item 
+                    .steps-footer__item
+                      .steps-footer__row
+                        .steps-footer__item
+                          a(href="#skip").btn.btn--text
+                            | ПРОПУСИТЬ
+                          // .btn.btn--text
+                        // .steps-footer__item
+                        .steps-footer__item
+                          a(href="#next").btn.btn--md
+                            | ДАЛЕЕ
+                          // .btn.btn--md
+                        //.steps-footer__item
+                      // .steps-footer__row 
+                    // .steps-footer__item 
+                  // .steps-footer__row 
+                // .steps-footer 
+              // .steps__container 
+            // .steps__bg-white 
+          // .steps-form__section 
+          h5.steps-form__header
+            span.h5.steps-form__title
+              | ПОРОШКОВАЯ ПОКРАСКА
+            // .h5.steps-form__title 
+            span.text.text--dark_grey.text--big
+              | 4/4
+            // .text.text--dark_grey.text--big 
+          // .steps-form__header
+          .steps-form__section
+            .steps-form__row.animate__animated
+              .steps-form__item.steps-form__item--full
+                .steps-form__radio
+                  +radio('color', 'Да', 'С двух сторон', true)
+                // .steps-form__radio 
+                .steps-form__radio
+                  +radio('color', '1/2', 'С одной стороны')
+                // .steps-form__radio 
+                .steps-form__radio
+                  +radio('color', 'Нет', 'Без покраски') 
+                // .steps-form__radio 
+              // .steps-form__item.steps-form__item--full 
+            // .steps-form__row.animate__animated 
+            .steps__bg-white
+              .steps__container
+                .steps-footer
+                  .steps-footer__row
+                    .steps-footer__item
+                      a(href="#prev").btn.btn--dg_empty.btn--md
+                        | НАЗАД
+                      // .btn.btn--dg_empty.btn--md 
+                    // .steps-footer__item 
+                    .steps-footer__item
+                      .steps-footer__row
+                        .steps-footer__item
+                          a(href="#finish").btn.btn--text
+                            | ПРОПУСИТЬ
+                          // .btn.btn--text
+                        // .steps-footer__item
+                        .steps-footer__item
+                          a(href="#finish").btn.btn--md
+                            | ДАЛЕЕ
+                          // .btn.btn--md
+                        //.steps-footer__item
+                      // .steps-footer__row 
+                    // .steps-footer__item 
+                  // .steps-footer__row 
+                // .steps-footer 
+              // .steps__container 
+            // .steps__bg-white 
+          // .steps-form__section 
+          h5.steps-form__header
+            span.h5.steps-form__title
+              | ПЕРЕЧЕНЬ РАБОТ
+            // .h5.steps-form__title 
+          // .steps-form__header
+          .steps-form__section
+            .steps-form__row.animate__animated
+              .steps-form__item.steps-form__item--full
+                table.text.steps-table
+                  tr 
+                    td
+                      span Ширина детали: 
+                      span#width
+                      span  мм
+                    td
+                      span Кол-во сгибов: 
+                      span#count-folds
+                      span  шт
+                    td
+                      span Материал: 
+                      span#material
+                  tr 
+                    td
+                      span Высота детали: 
+                      span#height
+                      span  мм
+                    td
+                      span Кол-во изделий: 
+                      span#count-item
+                    td
+                      span Длина лазерного реза: 
+                      span#length
+                      span  мм
+                  tr 
+                    td
+                      span Глубина детали: 
+                      span#depth
+                      span  мм
+                    td
+                      span Порошковая покраска:  
+                      span#color
+                    td
+                      span Сварка:  
+                      span#welding
+              // .steps-form__item.steps-form__item--full 
+              .steps-form__item.steps-form__item--full
+                h5.h5.steps-form__title
+                  | ПЕРЕЧЕНЬ РАБОТ
+                // .h5.steps-form__title 
+              // .steps-form__item.steps-form__item--full 
+              .steps-form__item
+                input(type="text", value="8 руб" readonly).input
+              // .steps-form__item 
+            // .steps-form__row.animate__animated
+            .steps__bg-white
+              .steps__container
+                .steps-footer
+                  .steps-footer__row.steps-footer__row--steps_end
+                    .steps-footer__item
+                      a(href="#prev").btn.btn--dg_empty.btn--md
+                        | НАЗАД
+                      // .btn.btn--dg_empty.btn--md
+                      a(href="#anew").btn.btn--text
+                        | Расчитать заново
+                      // .btn.btn--text 
+                    // .steps-footer__item 
+                    a(href="#end").btn.btn--md
+                      | ТОЧНАЯ СТОИМОСТЬ
+                    // .btn.btn--md 
+                  // .steps-footer__row.steps-footer__row--steps_end 
+                // .steps-footer 
+              // .steps__container 
+            // .steps__bg-white 
+          // .steps-form__section 
+        // .steps-form 
+      // .steps 
+    // .container 
+  // .section 
+
+  section.section
+    .container
+      h2.h2.h2--line_left.h2--lg
+        | ПРИМЕРЫ РАСКРОЯ МЕТАЛЛА
+      // .h2.h2--line_left.h2--lg 
+      .example
+        .example__slider 
+          - for(let j=0; j<2; j++)
+            - for(let i=0; i<5; i++)
+              .example__item
+                img(src=require("@img/example/"+i+".jpg").default, alt="example", width="224", height="224")
+        // .example__slider 
+        .example__pagination  
+        // .example__pagination 
+      // .example 
+    // .container 
+  // .section 

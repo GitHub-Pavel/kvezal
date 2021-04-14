@@ -5,15 +5,15 @@
     // .modal__icon 
   // .modal__close 
   form.prompt-form
-    h4.h4.h4--sm_big.text--center Оставьте свои данные и мы перезвоним Вам
-    label.input-icon.error
+    h4.h4.h4--sm_big.text--center.prompt-form__title Оставьте свои данные и мы перезвоним Вам
+    label.input-icon.error.prompt-form__label
       svg(width="20", height="20").input-icon__icon.input-icon__icon--green
         use(href="#user")
       // .input-icon__icon.input-icon__icon--green 
       input(type="text", placeholder="Ваше имя").input.input-icon__input
       span.text.text--red.error__text *Неправильное имя
     // .input-icon 
-    label.input-icon
+    label.input-icon.prompt-form__label
       svg(width="20", height="20").input-icon__icon.input-icon__icon--green
         use(href="#phone")
       // .input-icon__icon.input-icon__icon--green 

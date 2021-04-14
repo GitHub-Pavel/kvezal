@@ -1,0 +1,10 @@
+mixin checkbox(text)
+  label.check
+    input(type="checkbox").check__input.visually-hidden
+    span.check__box
+      svg(width="15", height="11").check__icon
+        use(href="#check")
+      // .check__icon 
+    span.text.check__text= text
+    // .text.check__text 
+  // .check 

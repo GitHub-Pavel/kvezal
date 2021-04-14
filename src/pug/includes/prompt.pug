@@ -40,13 +40,9 @@
       // .input-icon 
       textarea(name="message", placeholder="Cообщение").input.prompt-form__textarea
       .prompt-form__row
-        label.input-file.prompt-form__input-file
-          input(type="file").input-file__input
-          .text.input-file__text Прикрепить файлы
-          svg(width="20", height="20").input-file__icon
-            use(href="#download")
-          // .input-file__icon 
-        // .input-file.prompt-form__input-file 
+        .prompt-form__input-file
+          include /includes/input-file
+        // .prompt-form__input-file 
         a(href="").btn-message.prompt-form__btn-message
           svg(width="20", height="20").btn-message__icon
             use(href="#chat")

@@ -1,0 +1,7 @@
+mixin catalog-item(img, title)
+  a(href="").catalog-item
+    img(src=require("@img/catalog/"+img+".jpg").default, alt=title, width="280", height="200").catalog-item__img
+    // .catalog-item__img 
+    h5.h5.catalog-item__title= title
+    // .h5.catalog-item__title 
+  // .catalog-item 

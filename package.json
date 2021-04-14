@@ -73,6 +73,9 @@
     "animate.css": "^4.1.1",
     "blazy": "^1.8.2",
     "gsap": "^3.6.1",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "jquery-ui": "^1.12.1",
+    "jquery-validation": "^1.19.3",
+    "slick-carousel": "^1.8.1"
   }
 }

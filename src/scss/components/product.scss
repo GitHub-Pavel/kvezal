@@ -1,0 +1,207 @@
+.product {
+  @media (max-width: $sm + px) {
+    padding-top: 20px;
+  }
+
+  &__row {
+    @media (max-width: $md + px) {
+      grid-template-columns: 1.3fr 1fr;
+    }
+  } 
+
+  &-slider {
+    --size-thumb: 67px;
+
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width: $sm + px) {
+      --size-thumb: 80px;
+    }
+
+    @media (max-width: $xs + px) {
+      --size-thumb: 67px;
+    }
+
+    @media (max-width: $xx + px) {
+      --size-thumb: 50px;
+    }
+
+    &__pagination {
+      position: absolute;
+      top: calc(50% - (var(--size-thumb) - 23px));
+      left: 20px;
+      transform: translateY(-50%);
+      width: calc(100% - 40px);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__big {
+      img {
+        height: 41em;
+        width: 100%;
+        object-fit: cover;
+
+        @media (max-width: $md + px) {
+          height: 36em;
+        }
+
+        @media (max-width: $xs + px) {
+          height: 34.5em;
+        }
+      }
+    }
+
+    &__thumb {
+      margin-top: 17px;
+
+      @media (max-width: $xs + px) {
+        margin-top: 12px;
+      }
+
+      img {
+        width: 100%;
+        height: var(--size-thumb);
+        object-fit: cover;
+        border: 2px solid transparent;
+        transition: border-color .2s;
+      }
+
+      & .slick-slide {
+        padding-left: 8px;
+        padding-right: 8px;
+        cursor: pointer;
+        outline: none;
+
+        @media (max-width: $xs + px) {
+          padding-left: 6px;
+          padding-right: 6px;
+        }
+      }
+
+      & .slick-current {
+        cursor: default;
+        
+        img {
+          border-color: var(--green);
+        }
+      }
+
+      & .slick-list {
+        margin-left: -8px;
+        margin-right: -8px;
+
+        @media (max-width: $xs + px) {
+          margin-left: -6px;
+          margin-right: -6px;
+        }
+      }
+    }
+  }
+
+  &-description {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3em;
+
+    @media (max-width: $xs + px) {
+      gap: 2em;
+    }
+
+    &__title {
+      padding-bottom: 0;
+      text-transform: none;
+    }
+  }
+
+  &-price {
+    display: flex;
+    align-items: center;
+
+    &__title {
+      margin-left: 20px;
+
+      @media (max-width: $xx + px) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: $xs + px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: $less + px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  &__btn {
+    margin-left: 20px;
+
+    @media (max-width: $xs + px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: $less + px) {
+      margin-top: 10px;
+    }
+  }
+
+  &-table {
+    --pad-table: 20px;
+
+    border-collapse: collapse;
+
+    @media (max-width: $xx + px) {
+      --pad-table: 10px;
+    }
+
+    tr {
+      th {
+        text-align: left;
+        padding: 10px 0 var(--pad-table);
+        border-bottom: 1px solid var(--dark-grey);
+
+        @media (max-width: $xx + px) {
+          padding: 0 0 20px;
+        }
+      }
+
+      td {
+        width: 50%;
+        padding: var(--pad-table) 0;
+        border-bottom: 1px solid var(--grey);
+
+        @media (max-width: $xx + px) {
+          &:first-child {
+            width: 100%;
+          }
+
+          &:last-child {
+            width: none;
+
+            .text {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        td {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

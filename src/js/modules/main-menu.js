@@ -1,9 +1,9 @@
-import $ from "jquery";
+import $ from 'jquery';
 
 export default $(function() {
   $('body').on('click', '.sub-menu__link--button', e => {
     e.preventDefault();
-    $(e.currentTarget).closest('.sub-menu__item').toggleClass('sub-menu__item--open').find('.sub-menu__lower-menu').stop().slideToggle('slow');
+    $(e.currentTarget).closest('.sub-menu__item').toggleClass('sub-menu__item--open').find('.sub-menu__lower-menu').stop().slideToggle(300);
   });
   // $('body').on('mouseenter', '.sub-menu__item', e => {
   //   $(e.currentTarget).toggleClass('sub-menu__item--open').find('.sub-menu__lower-menu').stop().slideToggle('slow');
