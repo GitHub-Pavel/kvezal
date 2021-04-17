@@ -51,5 +51,17 @@ $(function() {
         scrollTop: $($(e.currentTarget).attr('href')).offset().top - 60
     }, 2000);
   });
+
+  $('body').on('click', '[href="#prompt"]', (e) => {
+    e.preventDefault();
+    let href = document.location.href.split('#')[0];
+    if (href == document.location.origin + '/') {
+      $('html, body').animate({
+        scrollTop: $($(e.currentTarget).attr('href')).offset().top - 60
+      }, 2000);
+    } else {
+      document.location.href = '/#prompt';
+    }
+  });
 });
 
