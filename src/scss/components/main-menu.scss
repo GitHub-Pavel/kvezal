@@ -55,6 +55,10 @@
           top: 0;
         }
       }
+
+      .main-menu__icon {
+        transform: rotateX(0);
+      }
     }
   }
 
@@ -72,7 +76,8 @@
 
   &__icon {
     margin-bottom: 1px;
-    transition: fill .2s;
+    transform: rotateX(180deg);
+    transition: fill .2s, transform .2s;
   }
 
   &__sub-menu {
@@ -121,7 +126,14 @@
 
           .main-menu__icon {
             fill: var(--white);
+            transform: rotateX(0);
           }
+
+          &:hover {
+            .main-menu__icon {
+              transform: rotateX(0);
+            }
+          } 
         }
 
         &::after {
@@ -139,6 +151,10 @@
         &:hover {
           &::after {
             width: 50px;
+          }
+
+          .main-menu__icon {
+            transform: rotateX(180deg);
           }
         } 
       }
